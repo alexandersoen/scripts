@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NOTE_TEMPLATE_DIR=/Users/alexander.soen/Documents/templates/notes
+NOTE_TEMPLATE_DIR=$HOME/Documents/templates/notes
 
 if [ "$#" -ne 1 ]; then
     echo "Illegal number of parameters"
