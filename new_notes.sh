@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 NOTE_TEMPLATE_DIR=$HOME/Documents/templates/notes
 

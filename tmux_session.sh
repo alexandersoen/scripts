@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Taken from https://github.com/SylvanFranklin/.config/blob/main/scripts/tmux-session-dispensary.sh.
 
 DIRS=(
-  "$HOME/Documents/code"
-  "$HOME/Documents/papers"
+  "$HOME/code"
+  "$HOME/papers"
 )
 
 if [[ $# -eq 1 ]]; then
