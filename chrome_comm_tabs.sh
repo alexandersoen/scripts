@@ -7,6 +7,7 @@ URLS=(
   "https://www.messenger.com"
   "https://webmail.kth.se"
   "https://chat.google.com"
+  "https://mattermost.cmlab.dev"
 )
 MARKER="gmail"
 COM_CLASS="WM_COMM_CHROME"
