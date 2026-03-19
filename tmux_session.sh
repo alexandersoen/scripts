@@ -5,6 +5,9 @@
 DIRS=(
   "$HOME/code"
   "$HOME/papers"
+  "$HOME/notes"
+  "$HOME/slides"
+  "$HOME/templates"
 )
 
 if [[ $# -eq 1 ]]; then
