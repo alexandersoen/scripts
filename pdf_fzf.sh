@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 DIRS=(
-  "$HOME/Documents/papers"
+  "$HOME/papers"
+  "$HOME/notes"
   "$HOME/Downloads"
   "$HOME/Zotero/storage"
 )
