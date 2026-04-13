@@ -13,12 +13,12 @@ if ! setup=$(autorandr --list | eval "$DMENU 'Display Setup'"); then
 fi
 
 # Select
-if err=$(autorandr -l "$setup" 2>&1 > /dev/null); then
+if err=$(autorandr -l "$setup" 2>&1 >/dev/null); then
   if [[ "$err" == *"Config already loaded"* ]]; then
     notify-send "Display Setup" "$setup already loaded"
     exit 0
   fi
-  notify-send "Display Setup" "Loaded $setup"
+  notify-send "Display Setup" "Loaded \"$setup\" profile"
 
 else
   notify_error "Failed to load $setup"
