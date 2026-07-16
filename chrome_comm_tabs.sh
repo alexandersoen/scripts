@@ -4,6 +4,7 @@
 URLS=(
   "https://mail.google.com"
   "https://calendar.google.com"
+  "https://web.whatsapp.com"
   "https://www.messenger.com"
   "https://webmail.kth.se"
   "https://chat.google.com"

@@ -6,6 +6,7 @@ DIRS=(
   "$HOME/code"
   "$HOME/papers"
   "$HOME/notes"
+  "$HOME/proposals"
   "$HOME/slides"
   "$HOME/templates"
 )
@@ -24,7 +25,7 @@ fi
 
 [[ ! $selected ]] && exit 0
 
-selected_name=$(basename "$selected" | tr . _)
+selected_name="$(basename "$(dirname "$selected" | tr . _)") | $(basename "$selected" | tr . _)"
 
 if ! tmux has-session -t "$selected_name"; then
     tmux new-session -ds "$selected_name" -c "$selected"

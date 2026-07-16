@@ -14,7 +14,7 @@ if [[ $# -eq 1 ]]; then
 else
   # Tried using find (and fzf), wayyy slower.
   selected=$(
-    fd -e pdf . "${DIRS[@]}" --type=file --full-path |
+    fd -I -e pdf . "${DIRS[@]}" --type=file --full-path |
       sed "s|^$HOME/||" |
       sk --margin 10% --preview="$PREVIEW_STR"
   )
