@@ -4,8 +4,8 @@ set -euo pipefail
 DMENU="dmenu -p"
 
 # Template sources
-NOTE_TEMPLATE_DIR="$HOME/templates/notes"
-SLIDE_TEMPLATE_DIR="$HOME/templates/slides"
+NOTE_TEMPLATE_DIR="$HOME/templates/note"
+SLIDE_TEMPLATE_DIR="$HOME/templates/slide"
 
 # Destination parents
 NOTE_DIR="$HOME/notes"
@@ -13,8 +13,7 @@ SLIDE_DIR="$HOME/slides"
 
 # Choose template type
 template_type=$(
-  # printf "%s\n" "note" "slide" | eval "$DMENU 'Template'"
-  printf "%s\n" "note" | eval "$DMENU 'Template'"
+  printf "%s\n" "note" "slide" | eval "$DMENU 'Template'"
 )
 
 [ -z "${template_type:-}" ] && exit 0

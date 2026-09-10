@@ -23,8 +23,8 @@ if [ -z "$WID" ]; then
     # Using "gmail" / marker to find correct windows
     WID=$(xdotool search --name "$MARKER" | head -n 1)
   done
-
-  xdotool set_window --classname "$COM_INSTANCE" "$WID"
 fi
 
-xdotool key "super+5"
+# Chrome's window has already been managed by the time its instance is changed.
+# Reassert it on every invocation so DWM can apply (or repair) the tag rule.
+xdotool set_window --classname "$COM_INSTANCE" "$WID" key "super+5"
