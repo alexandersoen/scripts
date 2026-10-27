@@ -13,6 +13,8 @@ URLS=(
 MARKER="gmail"
 COM_INSTANCE="wm_comm_chrome"
 
+KEY="${1:-super+9}"
+
 WID=$(xdotool search --classname "$COM_INSTANCE" | head -n 1)
 
 if [ -z "$WID" ]; then
@@ -27,4 +29,4 @@ fi
 
 # Chrome's window has already been managed by the time its instance is changed.
 # Reassert it on every invocation so DWM can apply (or repair) the tag rule.
-xdotool set_window --classname "$COM_INSTANCE" "$WID" key "super+5"
+xdotool set_window --classname "$COM_INSTANCE" "$WID" key "$KEY"

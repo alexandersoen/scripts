@@ -49,10 +49,9 @@ fi
 
 mkdir -p "$DEST_PARENT"
 
-# Clone, strip history, re-init
+# Clone, set remote as template 
 git clone "$TEMPLATE_SRC" "$DEST_PATH"
-rm -rf "$DEST_PATH/.git"
 cd "$DEST_PATH"
-git init
+git remote rename origin template
 
 notify-send "Template script" "Created $template_type at $DEST_PATH"
